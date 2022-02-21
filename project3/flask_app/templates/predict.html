@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color:#D4E4EC">
+  <form method="POST", action="http://127.0.0.1:5000/result", enctype="multipart/form-data">
+	
+    <fieldset style="border-color:lightslategray";>
+      <legend style="font-weight: 700; font-size: 32px; color:rgb(17, 47, 77);">"폐암 사전 자가 진단하기"</legend>
+      <img src="{{ url_for('static', filename='image2.png') }}">
+      <br/><br>
+          <legend style="font-weight: 700; font-size: large;">성별(F: 여자, M: 남자)</legend>
+
+          <select name="gender" class="form-select" aria-label="Default select example">
+            <option selected>성별을 고르세요</option>
+            <option value="0">F</option>
+            <option value="1">M</option>
+          </select>
+          <br/><br>
+
+          <legend style="font-weight: 700; font-size: large;">나이(숫자만 입력해주세요.)</legend>
+      <input type="text" id="age" name="age">
+      <br/>
+  
+      <br>
+          <legend style="font-weight: 700; font-size: large;">흡연자이신가요?</legend>
+
+          <select name="smoke" class="form-select" aria-label="Default select example">
+            <option selected>흡연 여부</option>
+            <option value="0">아니오</option>
+            <option value="1">예</option>
+          </select>
+          <br/><br/>
+
+      <legend style="font-weight: 700; font-size: large;">평소 황달(yellow finger) 증상이 있으신가요?</legend>
+
+      <select name="yellowf" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+            <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 불안감을 자주 느끼시나요?</legend>
+  
+      <select name="anxiety" class="form-select" aria-label="Default select example">
+        <option selected>불안감 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 사람들로부터 (심리적) 압박을 받고 있나요?</legend>
+  
+      <select name="peerp" class="form-select" aria-label="Default select example">
+        <option selected>압박 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">갖고 있는 만성 질환이 있나요?</legend>
+
+      <select name="chronic" class="form-select" aria-label="Default select example">
+        <option selected>만성질환 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 피로감을 느끼나요?</legend>
+  
+      <select name="fatigue" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">알러지가 있나요?</legend>
+  
+      <select name="allergy" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+      
+      <legend style="font-weight: 700; font-size: large;">평소 색색거림 증상이 있나요?</legend>
+  
+      <select name="wheezing" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 음주를 하나요?</legend>
+  
+      <select name="alcohol" class="form-select" aria-label="Default select example">
+        <option selected>알코올 소비 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 기침 증상이 있나요?</legend>
+  
+      <select name="cough" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 숨이 차나요?</legend>
+  
+      <select name="breathe" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 삼킴 장애가 있나요?</legend>
+  
+      <select name="swallow-diff" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <legend style="font-weight: 700; font-size: large;">평소 흉통 증상이 있나요?</legend>
+  
+      <select name="chestpain" class="form-select" aria-label="Default select example">
+        <option selected>증상 여부</option>
+        <option value="0">아니오</option>
+        <option value="1">예</option>
+      </select>
+      <br/><br/>
+  
+      <input type="submit", style="width:100pt;height:40pt;font-weight: 700;font-size: 500", value='예측 결과 확인 ⏩'>
+  
+          
+    </fieldset>
+  </form>
+</body>
+</html>
